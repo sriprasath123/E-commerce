@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-commerce Website</title>
+</head>
+<body>
+
+    <header>
+       
+        <h1>Sri Shoes Shop</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+        <article class="clock" id="model3">
+            <h3></h3>
+          
+            <div class="count">
+              <div id="timer"></div>
+            </div>
+          </article>
+    </header>
+    <div class="add">
+                      <img id="size" src="https://wallpapercave.com/wp/gOwBe5H.png" alt="">      
+                      <div class="timer">
+        <script>
+            var h3 = document.getElementsByTagName("h3");
+            h3[0].innerHTML = "Offer % Zone ";
+            
+            
+            var sec         = 1800,
+                countDiv    = document.getElementById("timer"),
+                secpass,
+                countDown   = setInterval(function () {
+                    'use strict';
+                    
+                    secpass();
+                }, 1000);
+            
+            function secpass() {
+                'use strict';
+                
+                var min     = Math.floor(sec / 60),
+                    remSec  = sec % 60;
+                
+                if (remSec < 10) {
+                    
+                    remSec = '0' + remSec;
+                
+                }
+                if (min < 10) {
+                    
+                    min = '0' + min;
+                
+                }
+                countDiv.innerHTML = min + ":" + remSec;
+                
+                if (sec > 0) {
+                    
+                    sec = sec - 1;
+                    
+                } else {
+                    
+                    clearInterval(countDown);
+                    
+                    countDiv.innerHTML = 'countdown done';
+                    
+                }
+            }
+              </script>
+    </div>  
+    
+    </div>
+
+
+    <main>
+        <section class="product">
+            <img src="image/OIP (3).jpeg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Description of Product 1.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="image/OIP (10).jpeg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Description of Product 2.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="image/OIP (11).jpeg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Description of Product 3.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="image/OIP (12).jpeg" alt="Product 4">
+            <h2>Product 4</h2>
+            <p>Description of Product 4.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+  <section class="product">
+            <img src="image/th (2).jpeg" alt="Product 5">
+            <h2>Product 5</h2>
+            <p>Description of Product 5.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="image/th (4).jpeg" alt="Product 6">
+            <h2>Product 6</h2>
+            <p>Description of Product 6.</p><br>
+            <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button>
+        </section>
+
+
+
+        <!-- More product sections can be added -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-commerce Store</p>
+    </footer>
+
+    
+</body>
+
+
+<script>
+          function addToCart() {
+            // You can add your cart logic here (e.g., update cart count, store product details, etc.)
+            alert("your product added sucessfully");
+        }
+</script>
+</html>
